@@ -26,7 +26,7 @@ async function send() {
 
   chat.innerHTML += `<div class='user'>You: ${msg}</div>`;
 
-  let res = await fetch("https://ai-girlfriend-backend-1.onrender.com", {
+  let res = await fetch("https://ai-girlfriend-backend-1.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: msg })
