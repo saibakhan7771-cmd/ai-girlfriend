@@ -193,3 +193,55 @@ body {
 .hidden {
   display: none;
   }
+/* Message wrapper */
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin: 6px 10px;
+  max-width: 85%;
+  animation: fadeIn 0.2s ease-in;
+}
+
+/* User message (right) */
+.msg.user {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.msg.user .bubble {
+  background: #262626;
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+
+/* Bot message (left) */
+.msg.bot {
+  margin-right: auto;
+}
+
+.msg.bot .bubble {
+  background: linear-gradient(135deg, #ff4d8d, #ff77aa);
+  color: white;
+  border-radius: 18px 18px 18px 4px;
+}
+
+/* Bubble */
+.bubble {
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Avatar */
+.msg img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
