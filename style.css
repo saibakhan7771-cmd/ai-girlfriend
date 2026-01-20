@@ -245,3 +245,9 @@ body {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.seen {
+  font-size: 11px;
+  color: #999;
+  text-align: right;
+  margin: 2px 12px 6px;
+  }
