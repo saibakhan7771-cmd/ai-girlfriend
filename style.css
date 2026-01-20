@@ -71,24 +71,32 @@ body {
 }
 
 .header {
-  height: 54px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
   background: #fff;
-  border-bottom: 1px solid #dbdbdb;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  padding: 0 12px;
+  border-bottom: 1px solid #eee;
   font-weight: 600;
+  z-index: 10;
+}
+
+.header-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .messages {
-  flex: 1;
-  padding: 12px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
+  padding-top: 70px; /* header ke niche space */
+  padding-bottom: 70px;
+  }
 /* MESSAGE BUBBLES */
 .msg {
   max-width: 75%;
