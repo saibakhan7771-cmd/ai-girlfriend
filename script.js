@@ -22,8 +22,20 @@ async function send() {
 }
 
 function addMsg(text, type) {
-  const div = document.createElement("div");
-  div.className = `msg ${type}`;
-  div.innerText = text;
-  document.getElementById("messages").appendChild(div);
+  const wrapper = document.createElement("div");
+  wrapper.className = `msg ${type}`;
+
+  if (type === "bot") {
+    const img = document.createElement("img");
+    img.src = "profile1.jpg";
+    wrapper.appendChild(img);
+  }
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.innerText = text;
+
+  wrapper.appendChild(bubble);
+  document.getElementById("messages").appendChild(wrapper);
+  wrapper.scrollIntoView({ behavior: "smooth" });
 }
