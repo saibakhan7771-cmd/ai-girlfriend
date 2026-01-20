@@ -25,6 +25,7 @@ function addMsg(text, type) {
   const wrapper = document.createElement("div");
   wrapper.className = `msg ${type}`;
 
+  // Bot (Aanya) profile image
   if (type === "bot") {
     const img = document.createElement("img");
     img.src = "profile1.jpg";
@@ -38,4 +39,12 @@ function addMsg(text, type) {
   wrapper.appendChild(bubble);
   document.getElementById("messages").appendChild(wrapper);
   wrapper.scrollIntoView({ behavior: "smooth" });
-}
+
+  // ✅ SEEN indicator (sirf user ke message pe)
+  if (type === "user") {
+    const seen = document.createElement("div");
+    seen.className = "seen";
+    seen.innerText = "Seen ✓✓";
+    document.getElementById("messages").appendChild(seen);
+  }
+      }
