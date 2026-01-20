@@ -138,3 +138,58 @@ body {
   padding: 0 16px;
   font-weight: 600;
   }
+/* Chat bubbles */
+.msg {
+  max-width: 75%;
+  padding: 10px 14px;
+  margin: 8px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* User message */
+.msg.user {
+  background: #262626;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+/* Aanya message */
+.msg.bot {
+  background: #ff4da6; /* PINK */
+  color: white;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+/* Aanya profile pic */
+.msg.bot img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+/* Typing indicator */
+.typing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff4da6;
+  font-size: 13px;
+  margin: 6px 12px;
+}
+
+.typing img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+  }
